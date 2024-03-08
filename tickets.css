@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lemon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    overflow: hidden;
+    background-color: #6683A2;
+}
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation:  colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.form{
+    color: white;
+    font-size: 21px;
+    margin-left: 640px;
+    margin-top: -600px;
+}
+input{
+    height: 37px;
+    width: 397px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    margin-top: 8px;
+    padding: 8px;
+    font-weight: 400;
+}
+input:focus{
+    box-shadow: #22496E 0px 2px 8px;
+    padding: 8px;
+}
+input::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 13px;
+    padding: 8px;
+}
+.sideImg{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+                url(Images/amusement2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 775px;
+    width: 100%;
+}
+#submit{
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 6px;
+}
+.return{
+    position: absolute;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #64647C;
+    color: white;
+    margin-top: 17px;
+    margin-left: 17px;
+    cursor: pointer;
+}
+@media screen and (max-width:1024px) {
+    .form{
+        margin-left: 27%;
+    }
+}
+@media screen and (max-width:425px) {
+    .form{
+        margin-left: 19%;
+        font-size: 18px;
+    }
+    input{
+        width: 307px;
+    }
+}
+@media screen and (max-width:375px) {
+    .form{
+        margin-left: 13%;
+        font-size: 18px;
+    }
+    input{
+        width: 307px;
+    }
+}
+@media screen and (max-width:320px) {
+    .form{
+        margin-left: 7%;
+        font-size: 15px;
+    }
+    input{
+        width: 280px;
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE</title>
+    <link rel="icon" type="image/x-icon" href="Images/theme-park.png">
+    <link rel="stylesheet" href="news.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="header&footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="header">
+        <input type="checkbox" id="hamburger">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Images/theme-park.png" alt=""></a>
+        </div>
+        <label for="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="l&d.html">Leisure & Dining</a></li>
+                <li><a href="pc.html">Park Characters</a></li>
+                <li><a href="news.html">What's Up</a></li>
+                <li><a href="pi.html">Park Information</a></li>
+                <div class="dropdownBtn">
+                    <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+                    <div class="dropdown">
+                        <a href="contact.html">Contact Us</a>
+                        <a href="parking.html">Parking</a>
+                        <a href="Location.html">Getting Here</a>
+                        <a href="FAQs.html">FAQs</a>
+                        <a href="h&s.html">Health & Safety Tips</a>    
+                    </div>
+                </div>
+                <li><a href="bo.html">Business Opportunities</a></li>
+                <li><a href="account.html"><i class="fa-solid fa-image-portrait" style="font-size: 21px;"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container01 hidden">
+        <div class="containerA hidden">
+            <h1 class="hidden">Get the latest news about FUN ZONE</h1>
+            <h4 class="hidden">Upcoming Events</h4>
+            <h6 class="hidden">Hero Costume Performance</h6>
+            <p class="hidden">By The Boyz</p>
+            <h6 class="hidden">Disney Roleplay Performance</h6>
+            <p class="hidden">By Iz*one</p>
+            <h6 class="hidden">Busking Band Performance</h6>
+            <p class="hidden">By Day6</p>
+            <h6 class="hidden">Hot Air Balloon Performance</h6>
+            <p class="hidden">By IU</p>
+        </div>
+        <div class="videos hidden">
+            <!-- 1st video -->
+        <div class="containerB hidden">
+            <img src="news/D51eLZeU8AAqEy61.jpg" alt="Image" id="image" width="100%">
+            <button id="toggleButton" onclick="toggleVideo()">Check out Spoiler</button>
+            <video id="videoPlayer">
+                <source src="news/0209 (3).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>Hero Costume Performance</h4>
+            <h5>Song: Bloom Bloom</h5>
+            <h6>Artist: THE BOYZ</h6>
+        </div>
+        <!-- 2nd video -->
+        <div class="containerC hidden">
+            <img src="news/IU1.jpg" alt="Image" id="image2" width="100%">
+            <button id="toggleButton2" onclick="toggleVideo2()">Check out Spoiler</button>
+            <video id="videoPlayer2">
+                <source src="news/Hot air ballon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>Hot Air Balloon Performance</h4>
+            <h5>Song: Strawberry Moon</h5>
+            <h6>Artist: IU</h6>
+        </div>
+        <!-- 3rd video -->
+        <div class="containerD hidden">
+            <img src="news/Izone1.png" alt="Image" id="image3" width="100%">
+            <button id="toggleButton3" onclick="toggleVideo3()">Check out Spoiler</button>
+            <video id="videoPlayer3">
+                <source src="news/0209 (2).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>Disney Princess Coseplay Performance</h4>
+            <h5>Song: Secret story of the swan</h5>
+            <h6>Artist: IZ*ONE</h6>
+        </div>
+        <!-- 4th video -->
+        <div class="containerE hidden">
+            <img src="news/Day6 busking.webp" alt="Image" id="image4" width="100%">
+            <button id="toggleButton4" onclick="toggleVideo4()">Check out Spoiler</button>
+            <video id="videoPlayer4">
+                <source src="news/0209 (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>Live Busking band Performance</h4>
+            <h5>Song: Congratulations (Eng ver.)</h5>
+            <h6>Artist: DAY6</h6>
+        </div>
+        </div>
+    </div>
+    <div class="containers">
+        <div class="leftContainers hidden">
+    <div class="container02 hidden">
+        <h1 class="hidden">Top News</h1>
+        <div class="bgImg hidden"></div>
+        <h3 class="hidden">The Hot Air balloon Performance</h3>
+        <p class="hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem quae ipsam, laboriosam aliquam aspernatur illum inventore, voluptates sunt tempora reiciendis consequatur non?</p>
+    </div>
+    <div class="bottomContainers hidden">
+    <div class="container04 hidden">
+        <img src="Images/bastien-nvs-g3CR0UJ1CyM-unsplash.jpg" alt="">
+        <h3 class="hidden">The Hot Air balloon Performance</h3>
+        <p class="hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem quae ipsam, laboriosam aliquam aspernatur illum inventore, voluptates sunt tempora reiciendis consequatur non?</p>
+    </div>
+    <div class="container04 hidden">
+        <img src="Images/bowcek-don-josemar-nemGzTJYHC4-unsplash.jpg" alt="">
+        <h3 class="hidden">The Hot Air balloon Performance</h3>
+        <p class="hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio autem quae ipsam, laboriosam aliquam aspernatur illum inventore, voluptates sunt tempora reiciendis consequatur non?</p>
+    </div>
+    </div>
+    </div>
+    <div class="container03">
+        <h1 class="hidden">Latest Stories</h1>
+        <div class="container-01 hidden">
+            <div class="category hidden">
+                <h4>Rides</h4>
+            </div>
+            <div class="description hidden">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, veritatis illum!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reiciendis dolorem, sequi provident quae eum dicta voluptatum odio, asperiores quia ipsa corporis odit?</p>
+            </div>
+            <div class="descriptionImage hidden"></div>
+        </div>
+        <div class="container-01 hidden">
+            <div class="category hidden">
+                <h4>Rides</h4>
+            </div>
+            <div class="description hidden">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, veritatis illum!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reiciendis dolorem, sequi provident quae eum dicta voluptatum odio, asperiores quia ipsa corporis odit?</p>
+            </div>
+            <div class="descriptionImage hidden"></div>
+        </div>
+        <div class="container-01 hidden">
+            <div class="category hidden">
+                <h4>Rides</h4>
+            </div>
+            <div class="description hidden">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, veritatis illum!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reiciendis dolorem, sequi provident quae eum dicta voluptatum odio, asperiores quia ipsa corporis odit?</p>
+            </div>
+            <div class="descriptionImage hidden"></div>
+        </div>
+        <div class="container-01 hidden">
+            <div class="category hidden">
+                <h4>Rides</h4>
+            </div>
+            <div class="description hidden">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, veritatis illum!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reiciendis dolorem, sequi provident quae eum dicta voluptatum odio, asperiores quia ipsa corporis odit?</p>
+            </div>
+            <div class="descriptionImage hidden"></div>
+        </div>
+        <div class="container-01 hidden">
+            <div class="category hidden">
+                <h4>Rides</h4>
+            </div>
+            <div class="description hidden">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, veritatis illum!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reiciendis dolorem, sequi provident quae eum dicta voluptatum odio, asperiores quia ipsa corporis odit?</p>
+            </div>
+            <div class="descriptionImage hidden"></div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="fL">
+            <div class="FlImg"></div>
+             <h2 class="heading">FUN ZONE</h2>
+        </div>
+        <div class="para">
+            <p>Where fun never ends!</p>
+        </div>
+        <div class="pages">
+            <ul>
+                <strong>Park Information</strong>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="l&d.html">Leisure & Dining</a></li>
+                <li><a href="pc.html">Park Characters</a></li>
+                <li><a href="news.html">What's Up</a></li>
+                <li><a href="pi.html">Park Information</a></li>
+                <li><a href="tickets.html">Ticketing</a></li>
+            </ul>
+            <ul>
+                <strong>Corporate Information</strong>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="parking.html">Parking</a></li>
+                <li><a href="bo.html">Business Opportunities</a></li>
+                <strong>General Information</strong>
+                <li><a href="pi.html">FAQs</a></li>
+                <li><a href="bo.html">Business Opportunities</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Images/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Images/1597747.png" alt=""></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="Images/twitter.png" alt=""></a>
+            <a href="https://accounts.google.com/v3/signin/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&authuser=1&theme=glif&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank"><img src="Images/email.png" alt=""></a>
+            <a href="https://youtube.com/" target="_blank"><img src="Images/youtube.png" alt=""></a>
+        </div>
+        <div class="copyright"><p>Developed By Javeria Ashab</p></div>
+    </footer>
+    </div>
+    <script defer src="news.js"></script>
+</body>
+</html>

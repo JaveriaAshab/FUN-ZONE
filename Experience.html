@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE</title>
+    <link rel="icon" type="image/x-icon" href="Images/theme-park.png">
+    <link rel="stylesheet" href="Experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="header&footer.css">
+    <script src="https://unpkg.com/gsap@3.10.1/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="header">
+        <input type="checkbox" id="hamburger">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="Images/theme-park.png" alt=""></a>
+            </div>
+            <label for="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Experience.html">Experience</a></li>
+                    <li><a href="l&d.html">Leisure & Dining</a></li>
+                    <li><a href="pc.html">Park Characters</a></li>
+                    <li><a href="news.html">What's Up</a></li>
+                    <li><a href="pi.html">Park Information</a></li>
+                    <div class="dropdownBtn">
+                        <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+                        <div class="dropdown">
+                            <a href="contact.html">Contact Us</a>
+                            <a href="parking.html">Parking</a>
+                            <a href="Location.html">Getting Here</a>
+                            <a href="FAQs.html">FAQs</a>
+                            <a href="h&s.html">Health & Safety Tips</a>    
+                        </div>
+                    </div>
+                    <li><a href="bo.html">Business Opportunities</a></li>
+                <li><a href="account.html"><i class="fa-solid fa-image-portrait" style="font-size: 21px;"></i></a></li>
+                </ul>
+            </div>
+        </header>
+        <h1 class="exp hidden">Explore more about FUN ZONE</h1>
+        <h3 class="exp2 hidden">See the map here...</h3>
+        <div class="MapContainer hidden">
+            <div class="sideTexts hidden">
+                <h1>Welcome to<br>FUN ZONE</h1>
+                <h6><a href="map.html">7 Wonders of the world</a></h6>
+                <h6><a href="map.html">7 Internationally themed zones</a></h6>
+                <h6><a href="map.html">Explore more...</a></h6>
+            </div>
+            <div class="mapImg hidden"></div>
+        </div>
+        <h1 class="exp3 hidden">What more you can find here,<br>in FUN ZONE</h1>
+        <div class="rides hidden">
+            <h1>Find amazing rides in FUN ZONE</h1>
+        </div>
+        <!-- 1st row -->
+        <div class="cardGroup hidden">
+            <!-- 1st -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front">
+                </div>
+                <div class="back">
+                    <h2>Skydiver</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front2">
+                </div>
+                <div class="back">
+                    <h2>Swing Ride</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 3rd -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front3">
+                </div>
+                <div class="back">
+                    <h2>Roller Coaster</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 4th -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front4">
+                </div>
+                <div class="back">
+                    <h2>Shoot the Chute</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="cardGroup hidden">
+            <!-- 5th -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front5">
+                </div>
+                <div class="back">
+                    <h2>Pirate Ship</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 6th -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front6">
+                </div>
+                <div class="back">
+                    <h2>Roller Coaster</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 7th -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front7">
+                </div>
+                <div class="back">
+                    <h2>Bumper Cars</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 8th -->
+        <div class="cards hidden">
+            <div class="cardContent">
+                <div class="front8">
+                </div>
+                <div class="back">
+                    <h2>Power Surge</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="wrapper">
+            <h1 class="hidden sww">Replica of Seven Wonders Of The World.</h1>
+            <div class="sliderContainer hidden">
+                <div class="col hidden">
+                        <h4>The Great Wall Of China</h4>
+                    <div class="caption">
+                        <p>The Great Wall was continuously built from the 3rd century BC to the 17th century AD on the northern border of the country as the great military defence project of successive Chinese Empires, with a total length of more than 20,000 kilometers.</p>
+                    </div>
+                </div>
+                <div class="col hidden">
+                        <h4>Chichén Itzá</h4>
+                    <div class="caption">
+                        <p>Chichén Itzá, ruined ancient Maya city occupying an area of 4 square miles (10 square km) in south-central Yucatán state, Mexico. It is thought to have been a religious, military, political, and commercial centre that at its peak would have been home to 35,000 people.</p>
+                    </div>
+                </div>
+                <div class="col hidden">
+                        <h4>Petra</h4>
+                    <div class="caption">
+                        <p>Petra is half-built, half-carved into the rock, and is surrounded by mountains riddled with passages and gorges. It is one of the world's most famous archaeological sites, where ancient Eastern traditions blend with Hellenistic architecture.</p>
+                    </div>
+                </div>
+                <div class="col hidden">
+                    <h4>Machu Picchu</h4>
+                <div class="caption">
+                    <p>Machu Picchu , Ancient fortress city of the Incas in the Andes Mountains, south-central Peru. Perched near Cuzco in a narrow saddle between two sharp peaks, at an elevation of 7,710 ft (2,350 m), it escaped detection by the Spaniards, and its existence was made known only in 1911 by U.S. explorer Hiram Bingham.</p>
+                </div>
+            </div>
+            <div class="col hidden">
+                <h4>Christ the Redeemer</h4>
+            <div class="caption">
+                <p>Christ the Redeemer statue is the largest Art Deco design ever built in the history of the world. The statue portrays Jesus with arms open, symbolizing welcome and peace. Its construction was proposed in 1850 by priest Pedro Mario in honor of Emperor Pedro II's daughter, Princess Isabel.</p>
+            </div>
+        </div>
+        <div class="col hidden">
+            <h4>Colosseum</h4>
+        <div class="caption">
+            <p>It is also called the Flavian Amphitheatre. It is an elliptical structure made of stone, concrete, and tuff, and it stands four stories tall at its highest point. It measures 620 by 513 feet (189 by 156 metres) and could hold as many as 50,000 spectators. The Colosseum was famously used for gladiatorial combat.</p>
+        </div>
+    </div>
+    <div class="col hidden">
+        <h4>Taj Mahal</h4>
+    <div class="caption">
+        <p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor, Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife, Mumtaz Mahal.</p>
+    </div>
+</div>
+            </div>
+        </div>
+        <footer>
+            <div class="fL">
+                <div class="FlImg"></div>
+                 <h2 class="heading">FUN ZONE</h2>
+            </div>
+            <div class="para">
+                <p>Where fun never ends!</p>
+            </div>
+            <div class="pages">
+                <ul>
+                    <strong>Park Information</strong>
+                    <li><a href="Experience.html">Experience</a></li>
+                    <li><a href="l&d.html">Leisure & Dining</a></li>
+                    <li><a href="pc.html">Park Characters</a></li>
+                    <li><a href="news.html">What's Up</a></li>
+                    <li><a href="pi.html">Park Information</a></li>
+                    <li><a href="tickets.html">Ticketing</a></li>
+                </ul>
+                <ul>
+                    <strong>Corporate Information</strong>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="parking.html">Parking</a></li>
+                    <li><a href="bo.html">Business Opportunities</a></li>
+                    <strong>General Information</strong>
+                    <li><a href="pi.html">FAQs</a></li>
+                    <li><a href="bo.html">Business Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/" target="_blank"><img src="Images/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="Images/1597747.png" alt=""></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="Images/twitter.png" alt=""></a>
+                <a href="https://accounts.google.com/v3/signin/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&authuser=1&theme=glif&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank"><img src="Images/email.png" alt=""></a>
+                <a href="https://youtube.com/" target="_blank"><img src="Images/youtube.png" alt=""></a>
+            </div>
+        <div class="copyright"><p>Developed By Javeria Ashab</p></div>
+        </footer>
+        </div>
+    <script defer src="Experience.js"></script>
+</body>
+</html>

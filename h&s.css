@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lemon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation:  colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.header{
+    background: linear-gradient(to right, rgba(0, 206, 209, 0.6), rgba(115, 0, 255, 0.6), rgba(255, 0, 51, 0.6), rgba(255, 110, 255, 0.6));
+    background-size: 400% 400%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation: bg 15s ease infinite;
+}
+header{
+    background-color: rgba(153, 102, 204, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    border-bottom: solid 1px #ffffff15;
+}
+.logo img{
+    height: 55px;
+    padding-left: 93px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 23px;
+}
+.menu li a:hover{
+    color: #000000;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -152px;
+    margin-top: 23px;
+}
+.dropdown a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 7px 11px;
+}
+#dropdown{
+    color: white;
+    position: absolute;
+    height: 21px;
+    font-weight: bold;
+    margin-left: -13px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+#dropdown:hover{
+    color: #000000;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdownBtn:hover .dropdown {
+    display: block;
+}
+.dropdownBtn {
+    position: relative;
+}
+.bgimg{
+    background-image: url(flatten.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 93vh;
+    width: 100%;
+}
+.texts{
+    position: absolute;
+    margin-top: -650px;
+    margin-left: 127px;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+.secLine h1, .firstLine h1{
+    font-family: Tahoma, Verdana, sans-serif;
+    font-weight: 1000;
+    line-height: 73px;
+}
+.firstLine{
+    text-shadow: rgb(0, 0, 0) 0px 2px 4px;
+}
+.secLine{
+    color: black;
+    text-shadow: darkslateblue 0px 2px 4px;
+    font-style: italic;
+}
+.tips{
+    width: 800px;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 47px;
+}
+.tips h1{
+    color: pink;
+    font-size: 67px;
+}
+.tips p{
+    margin-top: 13px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+.sliderContainer{
+    width: 1000px;
+    height: 400px;
+    background-color: rgb(204, 204, 204);
+    margin: 75px auto;
+    display: flex;
+}
+.col{
+    height: 100%;
+    flex: 1;
+    color: white;
+    box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    transition: 0.5s;
+}
+.col:nth-child(1){
+    background: #283491;
+}
+.col:nth-child(2){
+    background: #f18684;
+}
+.col:nth-child(3){
+    background: #6ee2f1;
+}
+.col h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+.caption{
+    max-width: 230px;
+    margin: 28px 0;
+    display: none;
+}
+.caption p{
+    width: 295px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.col img{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.col:hover{
+    flex-grow: 2.5;
+}
+.col:hover .caption{
+    display: block;
+}
+.col:hover h4{
+    text-align: left;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    height: 250px;
+    margin-top: 127px;
+    color: white;
+}
+.fL {
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    margin-top: -75px;
+}
+.FlImg {
+    height: 47px;
+    width: 47px;
+    background-image: url(Images/theme-park.png);
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+.heading {
+    margin: 0;
+    font-size: 14px;
+}
+.para{
+    margin-left: 275px;
+    margin-top: 75px;
+    position: absolute;
+    width: 127px;
+}
+.para p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: rgb(172, 172, 172);
+    font-size: 13px;
+}
+.pages{
+    display: flex;
+    gap: 67px;
+    margin-right: 713px;
+}
+.pages ul{
+    list-style: none;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.pages a, strong{
+    line-height: 25px;
+}
+.socials{
+    position: absolute;
+    margin-left: 957px;
+    display: flex;
+    gap: 13px;
+}
+.socials img{
+    height: 37px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+.copyright{
+    background-color: #2b2b2b;
+    position: absolute;
+    text-align: center;
+    margin-top: 17%;
+    width: 100%;
+    padding: 6px;
+    font-size: 0.8rem;
+}
+
+@keyframes bg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#hamburger{
+    display: none;
+}
+
+@media screen and (max-width:2560px) {
+    .bgimg{
+        height: 75vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -975px;
+        margin-left: 127px;
+        font-size: 32px;
+    }
+    .tips{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 47px;
+    }
+    .tips p{
+        margin-left: 26%;
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .bgimg{
+        height: 75vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -37%;
+        margin-left: 127px;
+        font-size: 27px;
+    }
+    .tips{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 47px;
+    }
+    .tips p{
+        margin-left: 26%;
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .bgimg{
+        height: 70vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -42%;
+        margin-left: 127px;
+        font-size: 23px;
+    }
+    .tips{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 47px;
+    }
+    .tips h1{
+        font-size: 47px;
+    }
+    .tips p{
+        margin-left: 21%;
+        width: 57vw;
+        font-size: 15px;
+    }
+    .sliderContainer{
+        width: 800px;
+        height: 400px;
+    }
+    .caption p{
+        width: 255px;
+        font-size: 15px;
+    }
+    .col img{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .texts{
+        margin-top: -53%;
+        margin-left: 8%;
+        font-size: 17px;
+    }
+    .secLine h1, .firstLine h1{
+        line-height: 47px;
+    }
+    .tips{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 45px;
+    }
+    .tips h1{
+        font-size: 42px;
+    }
+    .tips p{
+        margin-left: 21%;
+        width: 57vw;
+        font-size: 13px;
+    }
+    .sliderContainer{
+        width: 600px;
+        height: 400px;
+    }
+    .caption p{
+        width: 225px;
+        font-size: 14px;
+    }
+    .col:hover img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .bgimg{
+        height: 60vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -84%;
+        margin-left: 7%;
+        font-size: 12px;
+    }
+    .secLine h1, .firstLine h1{
+        line-height: 31px;
+    }
+    .tips h1{
+        font-size: 29px;
+    }
+    .tips p{
+        margin-left: 11%;
+        width: 77vw;
+        font-size: 13px;
+    }
+    .sliderContainer{
+        width: 400px;
+        height: 350px;
+    }
+    .col h4{
+        font-size: 13px;
+    }
+    .caption p{
+        width: 225px;
+        font-size: 14px;
+    }
+    .col img{
+        width: 127px;
+    }
+    .col:hover img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .bgimg{
+        height: 45vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -73%;
+        margin-left: 5%;
+        font-size: 11px;
+    }
+    .secLine h1, .firstLine h1{
+        line-height: 31px;
+    }
+    .tips h1{
+        font-size: 29px;
+    }
+    .tips p{
+        margin-left: 11%;
+        width: 77vw;
+        font-size: 13px;
+    }
+    .sliderContainer{
+        flex-direction: column;
+        width: 300px;
+        height: 600px;
+    }
+    .col h4{
+        font-size: 17px;
+        width: 200px;
+    }
+    .caption p{
+        width: 225px;
+        font-size: 14px;
+    }
+    .col img{
+        width: 78px;
+    }
+    .col:hover img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .bgimg{
+        height: 35vh;
+        width: 100%;
+    }
+    .texts{
+        margin-top: -64%;
+        margin-left: 5%;
+        font-size: 9px;
+    }
+    .secLine h1, .firstLine h1{
+        line-height: 23px;
+    }
+    .tips{
+        margin-top: 23px;
+    }
+    .tips h1{
+        font-size: 29px;
+    }
+    .tips p{
+        margin-left: 11%;
+        width: 77vw;
+        font-size: 13px;
+    }
+    .sliderContainer{
+        flex-direction: column;
+        width: 300px;
+        height: 600px;
+        margin-top: 17px;
+    }
+    .col h4{
+        font-size: 17px;
+        width: 200px;
+    }
+    .caption p{
+        width: 225px;
+        font-size: 14px;
+    }
+    .col img{
+        width: 78px;
+    }
+    .col:hover img{
+        display: none;
+    }
+}
+

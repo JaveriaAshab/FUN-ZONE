@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE</title>
+    <link rel="icon" type="image/x-icon" href="Images/theme-park.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pi.css">
+<link rel="stylesheet" href="header&footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="header">
+    <input type="checkbox" id="hamburger">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Images/theme-park.png" alt=""></a>
+        </div>
+        <label for="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </label>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="l&d.html">Leisure & Dining</a></li>
+                <li><a href="pc.html">Park Characters</a></li>
+                <li><a href="news.html">What's Up</a></li>
+                <li><a href="pi.html">Park Information</a></li>
+                <div class="dropdownBtn">
+                    <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+                    <div class="dropdown">
+                        <a href="contact.html">Contact Us</a>
+                        <a href="parking.html">Parking</a>
+                        <a href="Location.html">Getting Here</a>
+                        <a href="FAQs.html">FAQs</a>
+                        <a href="h&s.html">Health & Safety Tips</a>    
+                    </div>
+                </div>
+                <li><a href="bo.html">Business Opportunities</a></li>
+                <li><a href="account.html"><i class="fa-solid fa-image-portrait" style="font-size: 21px;"></i></a></li>
+            </ul>
+        </div>
+    </header>
+      <div class="container">
+        <div class="base">
+            <div class="baseImg">
+              <div class="img"></div>
+              <div class="baseText">
+                <h1>Find the operating hours and ticket prices.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt exercitationem ipsum iure accusamus facere eveniet deserunt quae illum? Corporis sit totam animi, molestias quae hic vero voluptatibus fuga? Est excepturi iste asperiores? Dolores voluptates alias, libero, magnam nam a autem voluptate minima adipisci ipsam facere!</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary moreButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    View More
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Park Information</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="images">
+            <div class="img01"></div>
+            <div class="img02"></div>
+            <div class="img03"></div>
+            </div>
+            <h1 class="opHrs timeHeading">Operating Hours</h1>
+            <h4 class="opHrs time">10:00 AM to 10:00 PM</h4>
+            <div class="ticketImg"></div>
+            <div class="tickets">
+              <div class="ticket">
+                <h3>Tickets for Kids</h3>
+                <h5>Rs. 400</h5>
+              </div>
+              <div class="ticket">
+                <h3>Tickets for Kids</h3>
+                <h5>Rs. 400</h5>
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary closeButton" data-bs-dismiss="modal"><a href="tickets.html">Book Now</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="linkedContainers">
+    <h1>Check out what we've got to offer</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium expedita provident commodi ut. Praesentium quaerat itaque assumenda?</p>
+    <div class="linkedContainer hidden">
+    <div class="linkedRides hidden">
+      <button><a href="Experience.html">Seven wonders of the world</a></button>
+    </div>
+    <div class="linkedMenu hidden">
+      <button><a href="l&d.html">Food courts</a></button>
+    </div>
+    <div class="linkedMap hidden">
+      <button><a href="map.html">International Zones</a></button>
+    </div>
+  </div>
+  </div>
+  <div class="containerB">
+    <div class="containerB-Base">
+      <div class="baseB-text">
+        <h1>Check out the map of FUN ZONE</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt cumque neque officia harum maiores nobis sapiente temporibus, culpa corporis veniam ratione expedita velit. Voluptas deleniti id optio reprehenderit maiores. Iusto beatae unde earum, vitae ullam saepe dolor.</p>
+      <button class="B-button"><a href="map.html">Check Map</a></button>
+      </div>
+      <div class="BaseB-Img">
+        <div class="b-Img"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <h1 class="rideInfo">Information about our rides</h1>
+  <div class="carousel-wrapper">
+  <div class="carousel">
+    <ul class="slider">
+      <!-- item 01 -->
+      <li class="item" style="background-image: url(Images/06.jpg);">
+      <div class="info">
+        <h2>Roller Coaster</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+      </div>
+      </li>
+      <!-- item 02 -->
+      <li class="item" style="background-image: url(Images/07.jpg);">
+        <div class="info">
+          <h2>Bumper Cars</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+        </div>
+        </li>
+      <!-- item 03 -->
+        <li class="item" style="background-image: url(Images/Untitled-design-36.png);">
+          <div class="info">
+            <h2>Ferris Wheel</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+          </div>
+          </li>
+      <!-- item 04 -->
+          <li class="item" style="background-image: url(Images/02.jpg);">
+            <div class="info">
+              <h2>Swing Ride</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+            </div>
+            </li>
+      <!-- item 05 -->
+            <li class="item" style="background-image: url(Images/01.jpg);">
+              <div class="info">
+                <h2>Skydiver</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+              </div>
+              </li>
+      <!-- item 06 -->
+              <li class="item" style="background-image: url(Images/05.jpg);">
+                <div class="info">
+                  <h2>Pirate Ship</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem fugit officia aut facilis odio ipsum voluptatum!</p>
+                </div>
+                </li>
+    </ul>
+    <nav>
+      <i class="fa-solid fa-arrow-left btn prev"></i>
+      <i class="fa-solid fa-arrow-right btn next"></i>
+    </nav>
+  </div>
+</div>
+  <footer>
+    <div class="fL">
+        <div class="FlImg"></div>
+         <h2 class="heading">FUN ZONE</h2>
+    </div>
+    <div class="para">
+        <p>Where fun never ends!</p>
+    </div>
+    <div class="pages">
+        <ul>
+            <strong>Park Information</strong>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="l&d.html">Leisure & Dining</a></li>
+            <li><a href="pc.html">Park Characters</a></li>
+            <li><a href="news.html">What's Up</a></li>
+            <li><a href="pi.html">Park Information</a></li>
+            <li><a href="tickets.html">Ticketing</a></li>
+        </ul>
+        <ul>
+            <strong>Corporate Information</strong>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="parking.html">Parking</a></li>
+            <li><a href="bo.html">Business Opportunities</a></li>
+            <strong>General Information</strong>
+            <li><a href="pi.html">FAQs</a></li>
+            <li><a href="bo.html">Business Opportunities</a></li>
+        </ul>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/" target="_blank"><img src="Images/facebook.png" alt=""></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="Images/1597747.png" alt=""></a>
+      <a href="https://www.twitter.com/" target="_blank"><img src="Images/twitter.png" alt=""></a>
+      <a href="https://accounts.google.com/v3/signin/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&authuser=1&theme=glif&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank"><img src="Images/email.png" alt=""></a>
+      <a href="https://youtube.com/" target="_blank"><img src="Images/youtube.png" alt=""></a>
+    </div>
+    <div class="copyright"><p>Developed By Javeria Ashab</p></div>
+</footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="pi.js"></script>
+</body>
+</html>

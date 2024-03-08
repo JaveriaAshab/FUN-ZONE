@@ -1,0 +1,1410 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation:  colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.7s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.header{
+    background: linear-gradient(to right, rgba(0, 206, 209, 0.6), rgba(115, 0, 255, 0.6), rgba(255, 0, 51, 0.6), rgba(255, 110, 255, 0.6));
+    background-size: 400% 400%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation: bg 15s ease infinite;
+}
+header{
+    background-color: rgba(153, 102, 204, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    border-bottom: solid 1px #ffffff15;
+    height: 87px;
+}
+.logo img{
+    height: 55px;
+    padding-left: 93px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 23px;
+}
+.menu li a:hover{
+    color: #000000;
+}
+.base{
+    height: 560px;
+    width: 100%;
+}
+.baseImg{
+    display: flex;
+    margin-top: 0;
+    margin-left: -145px;
+    height: 65vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.3));
+}
+.img{
+    float: left;
+    height: 50vh;
+    width: 27vw;
+    margin-left: 8%;
+    margin-top: 3%;
+    border-top-right-radius: 23%;
+    background-image: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.baseText{
+    width: 29vw;
+    margin-left: 13%;
+    margin-top: 3.5%;
+}
+.baseText h1{
+    color: black;
+    line-height: 127%;
+}
+.baseText p{
+    margin-top: 4%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 195%;
+}
+
+.modal{
+    background-color: rgba(128, 128, 128, 0.47);
+}
+.img01{
+    background-image: url(taylor-r-XptxqeT0Wo4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 215px;
+    width: 175px;
+    border-radius: 8px;
+}
+.img02{
+    background-image: url(Images/bastien-nvs-g3CR0UJ1CyM-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 215px;
+    width: 175px;
+    border-radius: 8px;
+}
+.img03{
+    background-image: url(Images/bowcek-don-josemar-nemGzTJYHC4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 215px;
+    width: 175px;
+    border-radius: 8px;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
+.opHrs{
+    text-align: center;
+    color: black;
+}
+.timeHeading{
+    font-size: 30px;
+    margin-top: 8px;
+}
+.time{
+    font-size: 17px;
+}
+.closeButton{
+    background-color: #64647C;
+}
+.closeButton a{
+    text-decoration: none;
+    color: white;
+}
+.moreButton{
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    padding: 13px;
+    font-size: 17px;
+    margin-left: 48.6%;
+    margin-top: -350px;
+}
+.moreButton:hover{
+    background-color: #232323;
+}
+.carousel-inner{
+    height: 550px;
+}
+.carousel-inner img{
+    height: 700px;
+}
+.ticketImg{
+    background-image: url(Images/4N04X8K_copyright_image_219336.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 127px;
+    width: 466px;
+    border-radius: 8px;
+}
+.tickets{
+    display: flex;
+    gap: 13px;
+}
+.ticket{
+    margin-top: 11px;
+    border: solid rgba(0, 0, 0, 0.3) 2px;
+    border-radius: 7px;
+    width: 227px;
+    padding: 8px;
+}
+.ticket h3{
+    font-size: 21px;
+}
+.ticket h3, .ticket h5{
+    margin-left: 8px;
+}
+.ticketBooking#blur.active{
+    filter: blur(20px);
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -152px;
+    margin-top: 23px;
+}
+.dropdown a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 7px 11px;
+}
+#dropdown{
+    color: white;
+    position: absolute;
+    height: 21px;
+    font-weight: bold;
+    margin-left: -13px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+#dropdown:hover{
+    color: #000000;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdownBtn:hover .dropdown {
+    display: block;
+}
+.dropdownBtn {
+    position: relative;
+}
+.linkedContainers{
+    margin-top: -83px;
+    text-align: center;
+}
+.linkedContainers h1{
+    margin-top: 3%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: black;
+    text-transform: capitalize;
+}
+.linkedContainers p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #232323;
+    font-size: 13px;
+    margin-bottom: 1.5%;
+}
+.linkedContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+.linkedRides,
+.linkedMenu,
+.linkedMap{
+    position: relative;
+    background-color: red;
+    height: 47vh;
+    width: 20vw;
+}
+.linkedRides button,
+.linkedMenu button,
+.linkedMap button{
+    outline: none;
+    border: none;
+    background-color: white;
+    padding-top: 2.3%;
+    padding-bottom: 2.3%;
+    margin-top: 95%;
+    width: 17vw;
+}
+.linkedRides button:hover,
+.linkedMenu button:hover,
+.linkedMap button:hover{
+    background-color: #ececec;
+}
+.linkedRides button a,
+.linkedMenu button a,
+.linkedMap button a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.linkedRides{
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(Images/1st.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.linkedMenu{
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(Images/1576548262194.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.linkedMap{
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(SevenItz/Whistler\ Blackcomb.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.containerB-Base{
+    display: flex;
+    margin-top: 3%;
+    height: 70vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.3));
+}
+.BaseB-Img{
+    width: 100vw;
+}
+.b-Img{
+    float: right;
+    height: 57vh;
+    width: 27vw;
+    margin-right: 13%;
+    margin-top: 3%;
+    border-top-right-radius: 23%;
+    border-bottom-left-radius: 13%;
+    background-image: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.baseB-text{
+    text-align: right;
+    position: absolute;
+    width: 29vw;
+    margin-left: 23%;
+    margin-top: 5.7%;
+}
+.baseB-text h1{
+    color: black;
+    line-height: 127%;
+}
+.baseB-text p{
+    margin-top: 4%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 195%;
+}
+.B-button{
+    background-color: #000000;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    padding: 13px;
+    font-size: 17px;
+}
+.B-button a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.B-button:hover{
+    background-color: #232323;
+}
+.rideInfo{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: -70px;
+    margin-top: 2%;
+    text-align: center;
+    text-shadow:  0 3px 8px rgba(255, 255, 255, 0.3);
+}
+/* slider */
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+}
+.slider{
+    position: absolute;
+    inset: 100px 260px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+.item{
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    list-style: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.1s, left 0.75s, width 0.75s, height 0.75s;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 20px;
+    opacity: 1;
+}
+.item:nth-child(3){
+    left: 70%;
+}
+.item:nth-child(4){
+    left: calc(70% + 250px);
+}
+.item:nth-child(5){
+    left: calc(70% + 500px);
+}
+.item:nth-child(6){
+    left: calc(70% + 750px);
+    opacity: 0;
+}
+.info{
+    width: min(30vw, 400px);
+    position: absolute;
+    top: 90%;
+    left: 2rem;
+    transform: translateY(-50%);
+    color: white;
+    opacity: 0;
+    display: none;
+    text-shadow:  0 3px 8px rgba(0, 0, 0, 0.5);
+}
+.info h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.info p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0.5rem 0 1.5rem;
+}
+.item:nth-child(2) .info{
+    display: block;
+    animation: animate 0.6s ease-in-out 0.3s forwards;
+}
+@keyframes animate {
+    0%{
+        filter: blur(5px);
+        transform: translateY(-50% + 75px);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+nav{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+}
+nav .btn{
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 0.3rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+nav .btn:hover{
+    background-color: white;
+    color: black;
+}
+.copyright{
+    background-color: #2b2b2b;
+    position: absolute;
+    text-align: center;
+    margin-top: 17%;
+    width: 100%;
+    padding: 6px;
+    font-size: 0.8rem;
+}
+@keyframes bg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#hamburger{
+    display: none;
+}
+
+@media screen and (max-width:2560px) {
+    .container{
+        margin-left: 0;
+    }
+    .baseImg{
+        margin-left: -12px;
+    }
+    .img{
+        height: 50vh;
+        width: 27vw;
+        margin-left: 11%;
+    }
+    .baseText{
+        width: 37vw;
+        margin-left: 11%;
+        margin-top: 4%;
+    }
+    .baseText h1{
+        padding: 5%;
+        font-size: 57px;
+        line-height: 147%;
+    }
+    .baseText p{
+        margin-top: -5%;
+        padding-left: 5%;
+        font-size: 32px;
+        line-height: 175%;
+    }
+    .moreButton{
+        margin-top: 5%;
+        margin-left: 51%;
+        padding: 19px;
+        font-size: 27px;
+    }
+    .linkedContainers{
+        margin-top: 8%;
+        text-align: center;
+    }
+    .linkedContainers h1{
+        margin-top: 3%;
+        font-size: 57px;
+    }
+    .linkedContainers p{
+        font-size: 25px;
+    }
+    .linkedRides,
+    .linkedMenu,
+    .linkedMap{
+        height: 47vh;
+        width: 23vw;
+    }
+    .b-Img{
+        margin-right: 14%;
+    }
+    .baseB-text{
+        width: 37vw;
+        margin-left: 15%;
+        margin-top: 5.7%;
+    }
+    .baseB-text h1{
+        padding: 5%;
+        font-size: 57px;
+        line-height: 147%;
+    }
+    .baseB-text p{
+        margin-top: -1%;
+        padding-left: 5%;
+        font-size: 32px;
+        line-height: 175%;
+    }
+    .B-button{
+        margin-top: 2%;
+        margin-left: 51%;
+        padding: 19px;
+        font-size: 27px;
+    }
+    .rideInfo{
+        font-size: 56px;
+    }
+    .carousel{
+        margin-top: 1%;
+        width: 100vw;
+        height: 100%;
+    }
+    .item{
+        width: 220px;
+        height: 300px;
+    }
+    .info{
+        width: min(30vw, 400px);
+    }
+    .info h2{
+        font-size: 2.5rem;
+    }
+    .info p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .baseImg{
+        margin-left: -12px;
+    }
+    .img{
+        height: 50vh;
+        width: 27vw;
+        margin-left: 11%;
+    }
+    .baseText{
+        width: 37vw;
+        margin-left: 11%;
+        margin-top: 4%;
+    }
+    .baseText h1{
+        padding: 5%;
+        font-size: 32px;
+        line-height: 147%;
+    }
+    .baseText p{
+        margin-top: -5%;
+        padding-left: 5%;
+        font-size: 17px;
+        line-height: 175%;
+    }
+    .moreButton{
+        margin-top: -23%;
+        margin-left: 51.5%;
+        padding: 17px;
+        font-size: 17px;
+    }
+    .linkedContainers{
+        margin-top: -7%;
+    }
+    .linkedContainers h1{
+        margin-top: 3%;
+        font-size: 40px;
+    }
+    .linkedContainers p{
+        font-size: 17px;
+    }
+    .linkedRides,
+    .linkedMenu,
+    .linkedMap{
+        height: 53vh;
+        width: 23vw;
+    }
+    .b-Img{
+        margin-right: 14%;
+    }
+    .baseB-text{
+        width: 34vw;
+        margin-left: 15%;
+        margin-top: 5.7%;
+    }
+    .baseB-text h1{
+        padding: 0%;
+        font-size: 35px;
+        line-height: 147%;
+    }
+    .baseB-text p{
+        margin-top: -1%;
+        padding-left: 5%;
+        font-size: 17px;
+        line-height: 175%;
+    }
+    .B-button{
+        margin-top: 2%;
+        margin-left: 51%;
+        padding: 17px;
+        font-size: 17px;
+    }
+    .rideInfo{
+        font-size: 56px;
+    }
+    .carousel{
+        margin-top: 1%;
+        width: 100vw;
+        height: 100%;
+    }
+    .item{
+        width: 220px;
+        height: 300px;
+    }
+    .info{
+        width: min(30vw, 400px);
+    }
+    .info h2{
+        font-size: 2.5rem;
+    }
+    .info p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .baseImg{
+        margin-left: -15px;
+    }
+    .baseText{
+        width: 47vw;
+        margin-left: 8%;
+        margin-top: 2%;
+    }
+    .baseText h1{
+        padding: 5%;
+        font-size: 37px;
+        line-height: 137%;
+    }
+    .baseText p{
+        margin-top: -5%;
+        padding-left: 5%;
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .moreButton{
+        margin-top: -26%;
+        margin-left: 48.3%;
+        padding: 13px;
+        font-size: 18px;
+    }
+    .linkedContainers{
+        margin-top: -3%;
+    }
+    .linkedContainers h1{
+        margin-top: 0%;
+        font-size: 40px;
+    }
+    .linkedContainers p{
+        font-size: 17px;
+    }
+    .linkedRides,
+    .linkedMenu,
+    .linkedMap{
+        margin-top: 1%;
+        height: 47vh;
+        width: 21vw;
+    }
+    .b-Img{
+        margin-right: 13%;
+    }
+    .baseB-text{
+        width: 47vw;
+        margin-left: 8%;
+        margin-top: 2%;
+    }
+    .baseB-text h1{
+        padding: 5%;
+        font-size: 37px;
+        line-height: 137%;
+    }
+    .baseB-text p{
+        margin-top: -5%;
+        padding: 5%;
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .B-button{
+        float: left;
+        margin-top: -5%;
+        margin-left: 78%;
+        padding: 13px;
+        font-size: 18px;
+    }
+    .rideInfo{
+        font-size: 40px;
+    }
+    .carousel{
+        margin-top: 1%;
+        width: 100vw;
+        height: 100%;
+    }
+    .item{
+        width: 220px;
+        height: 300px;
+    }
+    .info{
+        width: min(30vw, 400px);
+    }
+    .info h2{
+        font-size: 2.5rem;
+    }
+    .info p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .baseImg{
+        margin-left: -15px;
+    }
+    .img{
+        margin-left: 10%;
+        margin-top: 4%;
+    }
+    .baseText h1{
+        font-size: 27px;
+    }
+    .baseText p{
+        font-size: 17px;
+    }
+    .moreButton{
+        margin-top: -46.5%;
+        margin-left: 47.2%;
+        padding: 13px;
+        font-size: 14px;
+    }
+    .linkedContainers{
+        margin-top: -14%;
+    }
+    .linkedContainers h1{
+        font-size: 29px;
+    }
+    .linkedContainers p{
+        font-size: 13px;
+    }
+    .linkedRides button{
+        margin-top: 225px;
+    }
+    .linkedMenu button,
+    .linkedMap button{
+        margin-top: 245px;
+    }
+    .linkedRides button a,
+    .linkedMenu button a,
+    .linkedMap button a{
+    font-size: 14px;
+    }
+    .b-Img{
+        margin-right: 11%;
+    }
+    .baseB-text h1{
+        font-size: 27px;
+    }
+    .baseB-text p{
+        font-size: 17px;
+    }
+    .B-button{
+        float: left;
+        margin-top: -5%;
+        margin-left: 76%;
+        padding: 13px;
+        font-size: 14px;
+    }
+    .rideInfo{
+        margin-top: 20px;
+        font-size: 29px;
+    }
+    .carousel-wrapper{
+        height: 675px;
+    }
+    .carousel{
+        margin-top: 0%;
+        width: 100vw;
+        height: 100%;
+    }
+    .item{
+        width: 220px;
+        height: 300px;
+    }
+    .info{
+        width: min(30vw, 400px);
+        margin-top: -3%;
+    }
+    .info h2{
+        font-size: 2rem;
+    }
+    .info p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .baseImg{
+        margin-left: -12px;
+    }
+    .img{
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 37vw;
+    }
+    .baseText{
+        margin-left: 4%;
+    }
+    .baseText h1{
+        font-size: 23px;
+        margin-top: 6%;
+    }
+    .baseText p{
+        font-size: 15px;
+    }
+    .moreButton{
+        margin-top: -61%;
+        margin-left: 51.5%;
+        padding: 12px;
+        font-size: 13px;
+    }
+    .linkedContainers{
+        margin-top: -20%;
+    }
+    .linkedContainers h1{
+        font-size: 25px;
+    }
+    .linkedContainers p{
+        width: 75%;
+        margin-left: 12%;
+        font-size: 13px;
+    }
+    .linkedRides button{
+        margin-top: 231px;
+        line-height: 17px;
+    }
+    .linkedMenu button,
+    .linkedMap button{
+        margin-top: 245px;
+    }
+    .linkedRides button a,
+    .linkedMenu button a,
+    .linkedMap button a{
+    font-size: 12px;
+    padding: 8px;
+    }
+    .b-Img{
+        margin-right: 6%;
+        margin-top: 6%;
+        width: 37vw;
+    }
+    .baseB-text h1{
+        margin-top: 7%;
+        font-size: 25px;
+    }
+    .baseB-text p{
+        font-size: 15px;
+    }
+    .B-button{
+        margin-top: -7%;
+        margin-left: 70.2%;
+        padding: 12px;
+        font-size: 13px;
+    }
+    .rideInfo{
+        margin-top: 17px;
+        margin-bottom: -2.5%;
+        font-size: 29px;
+    }
+    .carousel-wrapper{
+        height: 675px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .baseImg{
+        margin-left: -12px;
+        height: 47vh;
+        width: 100vw;
+    }
+    .img{
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 37vw;
+        height: 37vh;
+    }
+    .baseText{
+        margin-left: 3%;
+    }
+    .baseText h1{
+        font-size: 15px;
+        margin-top: 6%;
+    }
+    .baseText p{
+        font-size: 11px;
+        line-height: 137%;
+    }
+    .moreButton{
+        margin-top: -149%;
+        margin-left: 51.5%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .linkedRides,
+    .linkedMenu,
+    .linkedMap{
+        height: 27vh;
+        width: 75vw;
+    }
+    .linkedContainer{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .linkedContainers{
+        margin-top: -62%;
+    }
+    .linkedContainers h1{
+        font-size: 19px;
+    }
+    .linkedContainers p{
+        width: 75%;
+        margin-left: 12%;
+        font-size: 12px;
+    }
+    .linkedRides button{
+        margin-top: 40%;
+        width: 90%;
+    }
+    .linkedMenu button,
+    .linkedMap button{
+        margin-top: 38%;
+        width: 90%;
+    }
+    .linkedRides button a,
+    .linkedMenu button a,
+    .linkedMap button a{
+        font-size: 13px;
+        padding: 4px;
+    }
+    .containerB-Base{
+        height: 47vh;
+        width: 100vw;
+    }
+    .b-Img{
+        width: 37vw;
+        height: 37vh;
+    }
+    .baseB-text h1{
+        font-size: 15px;
+        margin-top: 6%;
+    }
+    .baseB-text p{
+        margin-top: -11%;
+        font-size: 11px;
+        line-height: 137%;
+    }
+    .B-button{
+        margin-top: -9%;
+        margin-left: 65%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .rideInfo{
+        margin-top: 17px;
+        margin-bottom: -6%;
+        font-size: 19px;
+    }
+    .carousel-wrapper{
+        height: 675px;
+    }
+    .info h2{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .baseImg{
+        height: 42vh;
+    }
+    .img{
+        margin-top: 8%;
+        height: 32vh;
+    }
+    .baseText h1{
+        font-size: 13px;
+        margin-top: 6%;
+    }
+    .baseText p{
+        font-size: 10px;
+        line-height: 127%;
+    }
+    .moreButton{
+        margin-top: -189%;
+        margin-left: 50.5%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .linkedContainers{
+        margin-top: -78%;
+    }
+    .linkedContainers h1{
+        font-size: 18px;
+    }
+    .linkedContainers p{
+        width: 75%;
+        margin-left: 12%;
+        font-size: 11px;
+    }
+    .linkedRides button{
+        margin-top: 47%;
+        width: 90%;
+    }
+    .linkedMenu button,
+    .linkedMap button{
+        margin-top: 44%;
+        width: 90%;
+    }
+    .linkedRides button a,
+    .linkedMenu button a,
+    .linkedMap button a{
+        font-size: 13px;
+        padding: 4px;
+    }
+    .containerB-Base{
+        height: 42vh;
+        width: 100vw;
+    }
+    .b-Img{
+        margin-top: 8%;
+        width: 37vw;
+        height: 32vh;
+    }
+    .baseB-text h1{
+        font-size: 13px;
+        margin-top: 6%;
+    }
+    .baseB-text p{
+        font-size: 10px;
+        line-height: 127%;
+    }
+    .B-button{
+        margin-top: -10%;
+        margin-left: 60.5%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .rideInfo{
+        font-size: 18px;
+    }
+    .carousel-wrapper{
+        height: 675px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .baseText h1{
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 8%;
+    }
+    .baseText p{
+        font-size: 9px;
+        line-height: 132%;
+    }
+    .moreButton{
+        margin-top: -225%;
+        margin-left: 50%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .linkedContainers{
+        margin-top: -95%;
+    }
+    .linkedContainers h1{
+        font-size: 16px;
+    }
+    .linkedContainers p{
+        width: 75%;
+        margin-left: 12%;
+        font-size: 11px;
+    }
+    .linkedRides,
+    .linkedMenu,
+    .linkedMap{
+        height: 25vh;
+        width: 78vw;
+    }
+    .linkedRides button{
+        margin-top: 47%;
+        width: 90%;
+    }
+    .linkedMenu button,
+    .linkedMap button{
+        margin-top: 44%;
+        width: 90%;
+    }
+    .linkedRides button a,
+    .linkedMenu button a,
+    .linkedMap button a{
+        font-size: 13px;
+        padding: 4px;
+    }
+    .containerB-Base{
+        height: 42vh;
+        width: 100vw;
+    }
+    .b-Img{
+        margin-top: 8%;
+        width: 37vw;
+        height: 32vh;
+    }
+    .baseB-text h1{
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 8%;
+    }
+    .baseB-text p{
+        font-size: 9px;
+        line-height: 132%;
+    }
+    .B-button{
+        margin-top: -11%;
+        margin-left: 56%;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .rideInfo{
+        font-size: 18px;
+    }
+    .carousel-wrapper{
+        height: 675px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .slider{
+        inset: 40px 40px 200px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        top: initial;
+        bottom: -170px;
+    }
+    .item:nth-child(1), .item:nth-child(2){
+        top: initial;
+        bottom: 0px;
+    }
+    .item:nth-child(3){
+        left: 0;
+    }
+    .item:nth-child(4){
+        left: 120px;
+    }
+    .item:nth-child(5){
+        left: 240px;
+    }
+    .info{
+        left: 1rem;
+        padding: 0.5rem;
+        width: min(70vw, 400px);
+    }
+    .info h2{
+        font-size: 2rem;
+    }
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    height: 250px;
+    margin-top: 57%;
+    color: white;
+}
+.fL {
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    margin-top: -75px;
+}
+.FlImg {
+    height: 47px;
+    width: 47px;
+    background-image: url(Images/theme-park.png);
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+.heading {
+    margin: 0;
+    font-size: 14px;
+}
+.para{
+    margin-left: 275px;
+    margin-top: 75px;
+    position: absolute;
+    width: 127px;
+}
+.para p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: rgb(172, 172, 172);
+    font-size: 13px;
+}
+.pages{
+    display: flex;
+    gap: 67px;
+    margin-right: 713px;
+}
+.pages ul{
+    list-style: none;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.pages a, strong{
+    line-height: 25px;
+}
+.socials{
+    position: absolute;
+    margin-left: 957px;
+    display: flex;
+    gap: 13px;
+}
+.socials img{
+    height: 37px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 11px;
+        border-bottom: solid 1px #ffffff15;
+    }
+    .logo img{
+        height: 45px;
+        padding-left: 45px;
+    }
+    .menu li a{
+        color: white;
+        text-decoration: none;
+        margin: 0 17px;
+        font-size: 13px;
+    }
+    /* FOOTER */
+    footer{
+        height: 250px;
+        margin-top: 23px;
+    }
+    .fL {
+        margin-left: 105px;
+    }
+    .para{
+        margin-left: 165px;
+        margin-top: 7px;
+    }
+    .pages{
+        gap: 47px;
+        margin-right: 347px;
+    }
+    .socials{
+        margin-left: 737px;
+        gap: 13px;
+    }
+    .socials img{
+        height: 35px;
+    }
+}

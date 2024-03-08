@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE</title>
+    <title>FUN ZONE</title>
+    <link rel="icon" type="image/x-icon" href="Images/theme-park.png">
+    <link rel="stylesheet" href="tickets.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <a href="pi.html"><button class="return">Go Back</button></a>
+    <div class="sideImg"></div>
+    <div class="form">
+    <form action="" method="post" name="myform" id="yourFormId">
+        Name: <br> <input type="text" placeholder="Enter your name" name="name" id="name" required>
+        <br><br>
+        Phone Number: <br><input type="number" name="number" id="number" placeholder="Enter your phone number" required>
+        <br><br>
+        No. of tickets: <br><input type="number" name="tickets" id="tickets" placeholder="Enter your prefered no. of tickets" required>
+        <br><br>
+        Pick a date: <br><input type="date" name="date" id="date" required>
+        <br><br>
+        <button id="submit" class="confetti" name="submit" value="submit" onclick="ticketBooking()">Book ticket(s)</button>
+    </form>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById("yourFormId");
+
+    form.addEventListener('submit', (e) => {
+        const number = document.getElementById("number").value;
+        const ticket = document.getElementById("tickets").value;
+
+        if (number.length !== 11) {
+            alert("Please add a valid Phone Number.");
+            e.preventDefault();
+        } else if (ticket < 1) {
+            alert("Please enter the amount of tickets.");
+            e.preventDefault();
+        } else {
+            e.preventDefault();
+            alert("Your ticket has been booked successfully!");
+            confetti();
+        }
+    });
+});
+const cursor = document.querySelector(".cursor");
+        var timeout;
+        //Follow cursor
+        document.addEventListener("mousemove", (e) => {
+            let x = e.clientX;
+            let y = e.clientY;
+
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
+
+            //mouse stop
+            function mouseStopped(){
+                cursor.style.display = "none"
+            }
+            clearTimeout(timeout);
+            timeout = setTimeout(mouseStopped, 3000)
+        });
+        //Stop following cursor
+        document.addEventListener("mouseout",() => {
+            cursor.style.display = "none";
+        });
+    </script>
+</body>
+</html>

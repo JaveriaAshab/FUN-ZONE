@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN ZONE</title>
+    <link rel="icon" type="image/x-icon" href="Images/theme-park.png">
+    <link rel="stylesheet" href="map.css">
+<link rel="stylesheet" href="header&footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="header">
+        <input type="checkbox" id="hamburger">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="Images/theme-park.png" alt=""></a>
+        </div>
+        <label for="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="l&d.html">Leisure & Dining</a></li>
+                <li><a href="pc.html">Park Characters</a></li>
+                <li><a href="news.html">What's Up</a></li>
+                <li><a href="pi.html">Park Information</a></li>
+                <div class="dropdownBtn">
+                    <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+                    <div class="dropdown">
+                        <a href="contact.html">Contact Us</a>
+                        <a href="parking.html">Parking</a>
+                        <a href="Location.html">Getting Here</a>
+                        <a href="FAQs.html">FAQs</a>
+                        <a href="h&s.html">Health & Safety Tips</a>    
+                    </div>
+                </div>
+                <li><a href="bo.html">Business Opportunities</a></li>
+                <li><a href="account.html"><i class="fa-solid fa-image-portrait" style="font-size: 21px;"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="mapImg hidden">
+            <div class="icon">
+                <div class="DA hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="DA-Description">
+                        <div class="DA-Img"></div>
+                        <div class="Da-Text">
+                            <h3>Dining Zone</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="SWW hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="SWW-Description">
+                        <div class="SWW-Img"></div>
+                        <div class="SWW-Text">
+                            <h3>7 Wonders of <br> the world</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="ST hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="ST-Description">
+                        <div class="ST-Img"></div>
+                        <div class="ST-Text">
+                            <h3>7 Internationally<br>themed zones</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="AZ hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="AZ-Description">
+                        <div class="AZ-Img"></div>
+                        <div class="AZ-Text">
+                            <h3>Adventure Zone</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="HD hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="HD-Description">
+                        <div class="HD-Img"></div>
+                        <div class="HD-Text">
+                            <h3>Help & Safety<br>Desk & Area</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="PL-A hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="PL-A-Description">
+                        <div class="PL-A-Img"></div>
+                        <div class="PL-A-Text">
+                            <h3>Parking lot A</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="PL-B hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="PL-B-Description">
+                        <div class="PL-B-Img"></div>
+                        <div class="PL-B-Text">
+                            <h3>Parking lot C</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="containerB hidden">
+        <div class="texts hidden">
+            <h1>Welcome To FUN ZONE</h1>
+            <p>Pakistan 1st International Standard Theme Park in Karachi, featuring countless attractions of the highest standards.</p>
+            <p>Visit FUN ZONE and see the hidden chambers you have never seen before. The first of its kind to feature recreational facilities for different age groups.</p>
+            <p>Adventure land is all about Thrill, Entertainment, unlimited fun and forever lasting treasure of memories with effective safety measures.</p>
+            <p><strong>Take a look below at the fun you can look forward to at FUN ZONE.</strong></p>
+        </div>
+    </div>
+    <div class="adventureLand hidden">
+        <div class="adventureLand-Img hidden"></div>
+        <div class="adventureLand-Text">
+        <h1 class="hidden">Adventure Land Zone</h1>
+        <p class="hidden">Why leave young thrill seekers behind when Adventure land is offering a number of safe and fun rides. For a panoramic view, the amazing ferris wheel ride is so much fun for both kids and their elders. Who wouldn’t want to enjoy a ride in life-size tea cups at the Bon Voyage? An essential for the kids is the colorful Merry-Go-Round. Also ready to take off are the Bumble Bees who take the little ones for a flying expedition.</p>
+        </div>
+    </div>
+    <h1 class="Sitz hidden">Seven Internationally Themed Zones</h1>
+    <div class="card">
+    <button class="next" onclick="right()">></button>
+    <button class="prev" onclick="left()"><</button>
+    <div class="SevenItz hidden">
+        <div class="one hidden cards">
+            <div class="oneImg"></div>
+            <div class="oneText">
+            <h1>Japan</h1>
+            <h4>Cherry Blossom</h4>
+            <p>Enter the Cherry Blossom Oasis, a serene spot filled with blooming beauty. Enjoy the tranquil Japanese-inspired garden, perfect for relaxing under delicate pink and white petals.</p>
+            </div>
+        </div>
+        <div class="Two hidden cards">
+            <div class="TwoImg"></div>
+            <div class="TwoText">
+            <h1>Sweden</h1>
+            <h4>Ice Hotel Experience</h4>
+            <p>Experience Sweden's Ice Hotel – a frozen wonder with icy rooms and a frosty bar, providing an unforgettable adventure amid the stunning Northern Lights views.</p>
+            </div>
+        </div>
+        <div class="Three hidden cards">
+            <div class="ThreeImg"></div>
+            <div class="ThreeText">
+            <h1>Canada</h1>
+            <h4>Whistler Blackcomb</h4>
+            <p>Renowned winter resort nestled in the breathtaking landscapes of British Columbia, Canada. Enjoy world-class skiing and snowboarding in a spectacular mountain setting.</p>
+            </div>
+        </div>
+        <div class="Four hidden cards">
+            <div class="FourImg"></div>
+            <div class="FourText">
+            <h1>Italy</h1>
+            <h4>The Roman Forum</h4>
+            <p>Ancient heart of Rome, once the bustling hub of political, social, and commercial activities in the mighty Roman Empire. Immerse yourself in the rich history of iconic structures, temples, and civic buildings that defined an era.</p>
+            </div>
+        </div>
+        <div class="oneB hidden cards">
+            <div class="oneBImg"></div>
+            <div class="oneBText">
+            <h1>South Africa</h1>
+            <h4>The Cradle Of Humankind</h4>
+            <p>Journey back in time to the birthplace of humanity, where the echoes of our ancestral past resonate. Explore the archaeological wonders and fossil sites that unveil the remarkable story of human evolution in this UNESCO World Heritage site.</p>
+            </div>
+        </div>
+        <div class="TwoB hidden cards">
+            <div class="TwoBImg"></div>
+            <div class="TwoBText">
+            <h1>Australia</h1>
+            <h4>The Daintree Rainforest</h4>
+            <p>Daintree Rainforest, a UNESCO World Heritage site, captivates with its ancient allure—a sanctuary of unique flora and fauna, where lush greenery and diverse wildlife harmonize in a symphony of nature's wonders.</p>
+            </div>
+        </div>
+        <div class="ThreeB hidden cards">
+            <div class="ThreeBImg"></div>
+            <div class="ThreeBText">
+            <h1>China</h1>
+            <h4>The Forbidden City</h4>
+            <p>The Forbidden City in Beijing, China, is a sprawling imperial palace dating back to the Ming Dynasty. Recognized as a UNESCO World Heritage Site, it symbolizes China's rich history with its grand architecture, drawing millions of visitors annually.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="fL">
+            <div class="FlImg"></div>
+             <h2 class="heading">FUN ZONE</h2>
+        </div>
+        <div class="para">
+            <p>Where fun never ends!</p>
+        </div>
+        <div class="pages">
+            <ul>
+                <strong>Park Information</strong>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="l&d.html">Leisure & Dining</a></li>
+                <li><a href="pc.html">Park Characters</a></li>
+                <li><a href="news.html">What's Up</a></li>
+                <li><a href="pi.html">Park Information</a></li>
+                <li><a href="tickets.html">Ticketing</a></li>
+            </ul>
+            <ul>
+                <strong>Corporate Information</strong>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="parking.html">Parking</a></li>
+                <li><a href="bo.html">Business Opportunities</a></li>
+                <strong>General Information</strong>
+                <li><a href="pi.html">FAQs</a></li>
+                <li><a href="bo.html">Business Opportunities</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Images/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Images/1597747.png" alt=""></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="Images/twitter.png" alt=""></a>
+            <a href="https://accounts.google.com/v3/signin/identifier?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&ec=GAlAFw&authuser=1&theme=glif&flowName=GlifWebSignIn&flowEntry=AddSession" target="_blank"><img src="Images/email.png" alt=""></a>
+            <a href="https://youtube.com/" target="_blank"><img src="Images/youtube.png" alt=""></a>
+        </div>
+        <div class="copyright"><p>Developed By Javeria Ashab</p></div>
+    </footer>
+    </div>
+    <script defer src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation:  colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.header{
+    background: linear-gradient(to right, rgba(0, 206, 209, 0.6), rgba(115, 0, 255, 0.6), rgba(255, 0, 51, 0.6), rgba(255, 110, 255, 0.6));
+    background-size: 400% 400%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation: bg 15s ease infinite;
+}
+header{
+    background-color: rgba(153, 102, 204, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    border-bottom: solid 1px #ffffff15;
+}
+.logo img{
+    height: 55px;
+    padding-left: 93px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 23px;
+}
+.menu li a:hover{
+    color: #000000;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -152px;
+    margin-top: 23px;
+    z-index: 3;
+}
+.dropdown a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 7px 11px;
+}
+#dropdown{
+    color: white;
+    position: absolute;
+    height: 21px;
+    font-weight: bold;
+    margin-left: -13px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+#dropdown:hover{
+    color: #000000;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdownBtn:hover .dropdown {
+    display: block;
+}
+.dropdownBtn {
+    position: relative;
+}
+.LocHeading{
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 37px;
+    font-family: 'Charm', cursive;
+    margin-top: 13px;
+    width: 100%;
+}
+.opHrs{
+    border: 2px rgba(0, 0, 0, 0.4) solid;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 7px;
+    border-radius: 7px;
+    background-color: #ecb622;
+    line-height: 35px;
+    padding: 17px;
+    margin-left: 1200px;
+    width: 295px;
+    position: absolute;
+    z-index: 2;
+}
+.opHrs h1{
+    font-size: 27px;
+    color: white;
+}
+.opHrs h5{
+    color: #525252;
+    line-height: 23px;
+}
+.opHrs button{
+    background-color: crimson;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    margin-top: 11px;
+    box-shadow: rgba(0, 0, 0, 0.425) 0px 1px 7px;
+}
+.opHrs button a{
+    text-decoration: none;
+    color: black;
+}
+iframe{
+    position: relative;
+    margin-top: 90px;
+    z-index: 1;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    height: 250px;
+    margin-top: 75px;
+    color: white;
+}
+.fL {
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    margin-top: -75px;
+}
+.FlImg {
+    height: 47px;
+    width: 47px;
+    background-image: url(Images/theme-park.png);
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+.heading {
+    margin: 0;
+    font-size: 14px;
+}
+.para{
+    margin-left: 275px;
+    margin-top: 75px;
+    position: absolute;
+    width: 127px;
+}
+.para p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: rgb(172, 172, 172);
+    font-size: 13px;
+}
+.pages{
+    display: flex;
+    gap: 67px;
+    margin-right: 713px;
+}
+.pages ul{
+    list-style: none;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.pages a, strong{
+    line-height: 25px;
+}
+.socials{
+    position: absolute;
+    margin-left: 957px;
+    display: flex;
+    gap: 13px;
+}
+.socials img{
+    height: 37px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+.copyright{
+    background-color: #2b2b2b;
+    position: absolute;
+    text-align: center;
+    margin-top: 17%;
+    width: 100%;
+    padding: 6px;
+    font-size: 0.8rem;
+}
+
+@keyframes bg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#hamburger{
+    display: none;
+}
+
+@media screen and (max-width:2560px) {
+    .opHrs{
+        margin-left: 80%;
+    }
+    iframe{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:2000px) {
+    .opHrs{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width:1900px) {
+    .opHrs{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width:1800px) {
+    .opHrs{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width:1700px) {
+    .opHrs{
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .opHrs{
+        margin-left: 75%;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .opHrs{
+        margin-left: 75%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .opHrs{
+        margin-left: 70%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .opHrs{
+        margin-left: 70%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .opHrs{
+        margin-left: 68%;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .opHrs{
+        margin-left: 65%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .opHrs{
+        margin-left: 63%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .opHrs{
+        margin-left: 62%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .opHrs{
+        margin-left: 60%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .opHrs{
+        margin-left: 57%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .opHrs{
+        margin-left: 53%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .opHrs{
+        margin-left: 50%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .opHrs{
+        margin-left: 45%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .opHrs{
+        margin-left: 40%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .opHrs{
+        margin-left: 35%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .opHrs{
+        margin-left: 30%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .opHrs{
+        margin-left: 25%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .opHrs{
+        margin-left: 20%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .opHrs{
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:355px) {
+    .opHrs{
+        margin-left: 13%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:345px) {
+    .opHrs{
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .opHrs{
+        margin-left: 4%;
+        margin-top: 2%;
+    }
+}

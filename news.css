@@ -1,0 +1,1221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lemon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: url(Images/jeremy-lam-oB7XS_vqja4-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: black 0 2px 7px;
+}
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #2696e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    animation:  colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+@keyframes colors {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #2696e8;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.header{
+    background: linear-gradient(to right, rgba(0, 206, 209, 0.6), rgba(115, 0, 255, 0.6), rgba(255, 0, 51, 0.6), rgba(255, 110, 255, 0.6));
+    background-size: 400% 400%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation: bg 15s ease infinite;
+}
+header{
+    text-shadow: none;
+    background-color: rgba(153, 102, 204, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    border-bottom: solid 1px #ffffff15;
+}
+.logo img{
+    height: 55px;
+    padding-left: 93px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 23px;
+}
+.menu li a:hover{
+    color: #000000;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -152px;
+    margin-top: 23px;
+}
+.dropdown a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 7px 11px;
+}
+#dropdown{
+    color: white;
+    position: absolute;
+    height: 21px;
+    font-weight: bold;
+    margin-left: -13px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+#dropdown:hover{
+    color: #000000;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdownBtn:hover .dropdown {
+    display: block;
+}
+.dropdownBtn {
+    position: relative;
+}
+.container01{
+    margin-top: 2.3%;
+    display: flex;
+    width: 100%;
+    border-bottom: rgba(128, 128, 128, 0.6) solid 1px;
+}
+.containerA{
+    margin-left: 2.3%;
+    width: 34vw;
+    color: white;
+}
+.containerA h1, .containerA h4, .containerA h6, .containerA p{
+    font-family: 'Poppins', sans-serif;
+}
+.containerA h1{
+    margin-bottom: 2%;
+    width: 75%;
+    line-height: 47px;
+}
+.containerA h4{
+    margin-bottom: 4%;
+    font-size: 23px;
+    font-weight: 500;
+    color: #c4c4c4;
+}
+.containerA h6{
+    margin-bottom: 2%;
+    font-size: 17px;
+    font-weight: 700;
+}
+.containerA p{
+    margin-bottom: 3.7%;
+}
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 23px;
+    row-gap: 15px;
+    width: 66vw;
+}
+#videoPlayer, #videoPlayer2, #videoPlayer3, #videoPlayer4{
+    display: none;
+    width: 100%;
+}
+.containerB, .containerC, .containerD, .containerE{
+    width: 30vw;
+    height: 47vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    position: relative;
+    color: white;
+    line-height: 23px;
+}
+.containerB button, .containerC button, .containerD button, .containerE button{
+    position: absolute;
+    z-index: 1;
+    top: 79.5%;
+    right: 3%;
+    outline: none;
+    border: none;
+    padding: 8px;
+    height: 55px;
+    width: 97px;
+}
+.containerB h4, .containerC h4, .containerD h4, .containerE h4{
+    margin-top: 8px;
+    margin-left: 17px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+}
+.containerB h5, .containerC h5, .containerD h5, .containerE h5{
+    margin-left: 17px;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+}
+.containerB h6, .containerC h6, .containerD h6, .containerE h6{
+    margin-left: 17px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: capitalize;
+}
+.containerD, .containerD{
+    margin-bottom: 47px;
+}
+.leftContainers{
+    margin-top: 2%;
+}
+.containers{
+    display: flex;
+}
+.container02{
+    margin-top: 3.2%;
+    margin-left: 6.5%;
+    width: 34vw;
+    line-height: 27px;
+    color: white;
+}
+.container02 h3{
+    letter-spacing: 1.5px;
+    font-size: 23px;
+    margin-bottom: 11px;
+    text-transform: capitalize;
+}
+.container02 p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.bgImg{
+    margin-top: 47px;
+    margin-bottom: 23px;
+    background-image: url(news/IU1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 34vw;
+    height: 37vh;
+}
+.container03{
+    margin-top: 3.2%;
+    margin-left: 7%;
+    color: white;
+}
+.container-01{
+    margin-top: 5%;
+    display: flex;
+    color: white;
+    border-bottom: rgba(128, 128, 128, 1) solid 1px;
+}
+.category{
+    font-size: 23px;
+    width: 127px;
+    height: 127px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+.descriptionImage{
+    background-image: url(flatten.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 127px;
+    width: 127px;
+}
+.description{
+    width: 35vw;
+    margin-left: 1.3vw;
+    margin-right: 1vw;
+    line-height: 27px;
+}
+.description h3{
+    color: rgb(255, 255, 255);
+}
+.description p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: 17px;
+}
+.bottomContainers{
+    display: flex;
+}
+.container04{
+    width: 17vw;
+    color: white;
+    line-height: 27px;
+    letter-spacing: 0.6px;
+    margin-left: 6%;
+    margin-top: 6%;
+}
+.container04 p{
+    font-family: 'Poppins', sans-serif;
+}
+.container04 img{
+    width: 17vw;
+    height: 50vh;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    height: 250px;
+    margin-top: 75px;
+    color: white;
+}
+.fL {
+    display: flex;
+    align-items: center;
+    margin-left: 275px;
+    margin-top: -75px;
+}
+.FlImg {
+    height: 47px;
+    width: 47px;
+    background-image: url(Images/theme-park.png);
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+.heading {
+    margin: 0;
+    font-size: 14px;
+}
+.para{
+    margin-left: 275px;
+    margin-top: 75px;
+    position: absolute;
+    width: 127px;
+}
+.para p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: rgb(172, 172, 172);
+    font-size: 13px;
+}
+.pages{
+    display: flex;
+    gap: 67px;
+    margin-right: 713px;
+}
+.pages ul{
+    list-style: none;
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.pages a, strong{
+    line-height: 25px;
+}
+.socials{
+    position: absolute;
+    margin-left: 957px;
+    display: flex;
+    gap: 13px;
+}
+.socials img{
+    height: 37px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+.copyright{
+    background-color: #2b2b2b;
+    position: absolute;
+    text-align: center;
+    margin-top: 17%;
+    width: 100%;
+    padding: 6px;
+    font-size: 0.8rem;
+}
+@keyframes bg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#hamburger{
+    display: none;
+}
+
+@media screen and (max-width:2560px) {
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 43vh;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 85.5%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        font-size: 21px;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 17px;
+        margin-top: 1%;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 15px;
+        margin-top: 1%;
+    }
+    .descriptionImage{
+        height: 245px;
+        width: 245px;
+    }
+    .category h4{
+        font-size: 27px;
+        padding-top: 75%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .description h3{
+        font-size: 27px;
+        line-height: 43px;
+    }
+    .description p{
+        font-size: 25px;
+        line-height: 43px;
+    }
+}
+
+@media screen and (max-width:2415px) {
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 82.5%;
+    }
+}
+
+@media screen and (max-width:2300px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 37vh;
+    }
+}
+
+@media screen and (max-width:2180px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 36vh;
+    }
+}
+
+@media screen and (max-width:2040px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 35vh;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width:1990px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 34vh;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 43vh;
+    }
+    .descriptionImage{
+        height: 205px;
+        width: 205px;
+    }
+    .category h4{
+        font-size: 27px;
+        padding-top: 75%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .description h3{
+        font-size: 25px;
+        line-height: 43px;
+    }
+    .description p{
+        font-size: 23px;
+        line-height: 37px;
+    }
+}
+
+@media screen and (max-width:1900px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 33vh;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 41vh;
+    }
+    .descriptionImage{
+        height: 195px;
+        width: 195px;
+    }
+    .category h4{
+        font-size: 27px;
+        padding-top: 75%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .description h3{
+        font-size: 24px;
+        line-height: 43px;
+    }
+    .description p{
+        font-size: 22px;
+        line-height: 37px;
+    }
+}
+
+@media screen and (max-width:1850px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 32vh;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 80%;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 38vh;
+    }
+}
+
+@media screen and (max-width:1775px) {
+    .containerB, .containerC, .containerD, .containerE{
+        height: 31vh;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 80%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        font-size: 19px;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 16px;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 14px;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 39vh;
+    }
+    .descriptionImage{
+        height: 175px;
+        width: 175px;
+    }
+    .category h4{
+        font-size: 25px;
+        padding-top: 75%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .description h3{
+        font-size: 23px;
+        line-height: 43px;
+    }
+    .description p{
+        font-size: 20px;
+        line-height: 37px;
+    }
+    .bgImg{
+        margin-top: 47px;
+        margin-bottom: 23px;
+        width: 34vw;
+        height: 31vh;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 47vh;
+    line-height: 20px;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 79.5%;
+        right: 3%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        font-size: 16px;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 14px;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 12px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 47px;
+    }
+    .container02{
+        width: 34vw;
+    }
+    .container02 h3{
+        font-size: 23px;
+    }
+    .bgImg{
+        width: 34vw;
+        height: 37vh;
+    }
+    .category h4{
+        font-size: 18px;
+        padding-top: 50%;
+    }
+    .descriptionImage{
+        height: 127px;
+        width: 127px;
+    }
+    .description h3{
+        font-size: 20px;
+        line-height: 1.7;
+    }
+    .description p{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .bottomContainers{
+        display: flex;
+    }
+    .container04{
+        width: 17vw;
+        color: white;
+        line-height: 27px;
+        letter-spacing: 0.6px;
+        margin-left: 6%;
+        margin-top: 6%;
+    }
+    .container04 p{
+        font-family: 'Poppins', sans-serif;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 75%;
+        right: 3%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        font-size: 14px;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 13px;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 27vh;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 42vh;
+    line-height: 20px;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 76%;
+        right: 3%;
+        font-size: 10px;
+        height: 40px;
+        width: 70px;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        font-size: 14px;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 11px;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 9px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 47px;
+    }
+    .container02{
+        width: 34vw;
+    }
+    .container02 h3{
+        font-size: 22px;
+    }
+    .bgImg{
+        width: 34vw;
+        height: 37vh;
+    }
+    .category h4{
+        font-size: 18px;
+        padding-top: 45%;
+    }
+    .descriptionImage{
+        height: 127px;
+        width: 127px;
+    }
+    .description{
+        margin-left: 0;
+        width: 31vw;
+    }
+    .description h3{
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .description p{
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    .bottomContainers{
+        display: flex;
+    }
+    .container04{
+        width: 17vw;
+        color: white;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+        margin-left: 6%;
+        margin-top: 6%;
+    }
+    .container04 p{
+        font-family: 'Poppins', sans-serif;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 35vh;
+    line-height: 17px;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        top: 76%;
+        right: 3%;
+        font-size: 8px;
+        height: 35px;
+        width: 60px;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 10px;
+        width: 127px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 8px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 37px;
+    }
+    .container02{
+        width: 34vw;
+    }
+    .container02 h3{
+        font-size: 21px;
+    }
+    .container02 p{
+        line-height: 1.4;
+        font-size: 12px;
+    }
+    .bgImg{
+        width: 34vw;
+        height: 30vh;
+    }
+    .category h4{
+        font-size: 18px;
+        padding-top: 40%;
+    }
+    .descriptionImage{
+        height: 107px;
+        width: 107px;
+    }
+    .description{
+        width: 26vw;
+    }
+    .description h3{
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    .description p{
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    .container04 h3{
+        font-size: 19px;
+    }
+    .container04 p{
+        line-height: 1.4;
+        font-size: 12px;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .containerA{
+        margin-left: 5%;
+        margin-right: 0%;
+        width: 127vw;
+        padding: 6px;
+    }
+    .containerA h1{
+        width: 100%;
+        line-height: 37px;
+        font-size: 27px;
+    }
+    .containerA h4{
+        font-size: 17px;
+    }
+    .containerA h6{
+        font-size: 15px;
+    }
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        height: 31vh;
+    line-height: 13px;
+    }
+    .containerB button{
+        top: 73%;
+    }
+    .containerC button{
+        top: 79%;
+    }
+    .containerD button{
+        top: 89%;
+    }
+    .containerE button{
+        top: 94%;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        right: 9%;
+        font-size: 8px;
+        height: 25px;
+        width: 78%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 9px;
+        width: 107px;
+        font-weight: 300;
+        line-height: 1.3;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 8px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 17px;
+    }
+    .videos{
+        margin-bottom: 27px;
+    }
+    .container02{
+        width: 34vw;
+    }
+    .container02 h1{
+        font-size: 23px;
+    }
+    .container02 h3{
+        font-size: 17px;
+        margin-bottom: 2%;
+        line-height: 1.3;
+    }
+    .container02 p{
+        line-height: 1.4;
+        font-size: 11px;
+    }
+    .bgImg{
+        margin-top: 8%;
+        margin-bottom: 5%;
+        width: 34vw;
+        height: 30vh;
+    }
+    .category h4{
+        font-size: 18px;
+        padding-top: 0%;
+        margin-top: -67%;
+        padding-right: 23px;
+        height: auto;
+        width: auto;
+    }
+    .descriptionImage{
+        height: 107px;
+        width: 107px;
+        position: absolute;
+        margin-top: 17%;
+    }
+    .description{
+        width: 26vw;
+    }
+    .description h3{
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .description p{
+        font-size: 9px;
+        line-height: 1.3;
+    }
+    .container04 h3{
+        font-size: 11px;
+        line-height: 1.3;
+    }
+    .container04 p{
+        line-height: 1.4;
+        font-size: 9px;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 37vh;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .containerA h1{
+        width: 100%;
+        line-height: 37px;
+        font-size: 25px;
+    }
+    .containerA h4{
+        font-size: 17px;
+    }
+    .containerA h6{
+        font-size: 15px;
+    }
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        line-height: 13px;
+    }
+    .containerB{
+        height: 28vh;
+    }
+    .containerB button{
+        top: 80%;
+    }
+    .containerC{
+        height: 32vh;
+    }
+    .containerC button{
+        top: 82%;
+    }
+    .containerD{
+        height: 33vh;
+    }
+    .containerD button{
+        top: 87%;
+    }
+    .containerE button{
+        top: 90%;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        right: 9%;
+        font-size: 8px;
+        height: 25px;
+        width: 78%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        margin-left: 8px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 9px;
+        width: 107px;
+        margin-left: 8px;
+        font-weight: 300;
+        line-height: 1.3;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 8px;
+        margin-left: 8px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 8px;
+    }
+    .videos{
+        margin-bottom: 27px;
+    }
+    .container02 h1{
+        font-size: 21px;
+    }
+    .container02 h3{
+        font-size: 15px;
+        margin-bottom: 2%;
+        line-height: 1.3;
+    }
+    .container02 p{
+        line-height: 1.4;
+        font-size: 11px;
+    }
+    .bgImg{
+        margin-top: 8%;
+        margin-bottom: 5%;
+        width: 34vw;
+        height: 30vh;
+    }
+    .container03 h1{
+        font-size: 21px;
+    }
+    .category h4{
+        font-size: 17px;
+        padding-top: 0%;
+        margin-top: -67%;
+        padding-right: 23px;
+        height: auto;
+        width: auto;
+    }
+    .descriptionImage{
+        height: 107px;
+        width: 107px;
+        position: absolute;
+        margin-top: 17%;
+    }
+    .description{
+        width: 25vw;
+    }
+    .description h3{
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .description p{
+        font-size: 9px;
+        line-height: 1.3;
+    }
+    .container04 h3{
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .container04 p{
+        line-height: 1.2;
+        font-size: 8px;
+    }
+    .container04 img{
+        width: 17vw;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .containerA h1{
+        width: 100%;
+        line-height: 37px;
+        font-size: 25px;
+    }
+    .containerA h4{
+        font-size: 17px;
+    }
+    .containerA h6{
+        font-size: 15px;
+    }
+    .containerB, .containerC, .containerD, .containerE{
+        width: 30vw;
+        line-height: 13px;
+    }
+    .containerB{
+        height: 25vh;
+    }
+    .containerB button{
+        top: 75%;
+    }
+    .containerC{
+        height: 26vh;
+    }
+    .containerC button{
+        top: 78%;
+    }
+    .containerD{
+        height: 26vh;
+    }
+    .containerD button{
+        top: 87%;
+    }
+    .containerE{
+        height: 28vh;
+    }
+    .containerE button{
+        top: 87%;
+    }
+    .containerB button, .containerC button, .containerD button, .containerE button{
+        right: 9%;
+        font-size: 8px;
+        height: 35px;
+        width: 78%;
+    }
+    .containerB h4, .containerC h4, .containerD h4, .containerE h4{
+        margin-top: 8px;
+        margin-left: 8px;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+    .containerB h5, .containerC h5, .containerD h5, .containerE h5{
+        font-size: 8px;
+        width: 95px;
+        margin-left: 8px;
+        font-weight: 300;
+        line-height: 1.3;
+    }
+    .containerB h6, .containerC h6, .containerD h6, .containerE h6{
+        font-size: 7px;
+        margin-left: 8px;
+    }
+    .containerD, .containerD{
+        margin-bottom: 11px;
+    }
+    .videos{
+        margin-bottom: 27px;
+    }
+    .container02 h1{
+        font-size: 18px;
+    }
+    .container02 h3{
+        font-size: 14px;
+        margin-bottom: 2%;
+        line-height: 1.2;
+    }
+    .container02 p{
+        line-height: 1.4;
+        font-size: 11px;
+    }
+    .bgImg{
+        margin-top: 8%;
+        margin-bottom: 5%;
+        width: 34vw;
+        height: 30vh;
+    }
+    .container03 h1{
+        font-size: 21px;
+    }
+    .category h4{
+        font-size: 17px;
+        padding-top: 0%;
+        margin-top: -37%;
+        padding-right: 23px;
+        height: auto;
+        width: auto;
+    }
+    .descriptionImage{
+        height: 95px;
+        width: 95px;
+        position: absolute;
+        margin-top: 32%;
+    }
+    .description{
+        width: 19vw;
+        margin-left: -9%;
+    }
+    .description h3{
+        font-size: 9px;
+        line-height: 1.2;
+    }
+    .description p{
+        font-size: 8px;
+        line-height: 1.3;
+    }
+    .bottomContainers{
+        flex-direction: column;
+    }
+    .container04{
+        width: 34vw;
+    }
+    .container04 h3{
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .container04 p{
+        line-height: 1.2;
+        font-size: 8px;
+    }
+    .container04 img{
+        width: 34vw;
+        height: 30vh;
+    }
+}
